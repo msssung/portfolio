@@ -12,7 +12,7 @@ interface ProjectCardNewProps {
 export function ProjectCardNew({ project }: ProjectCardNewProps) {
   return (
     <Link href={`/projects/${project.id}`} className="block group">
-      <div className="bg-[#243052] rounded-xl overflow-hidden border border-[#2e3d6a] transition-all duration-300 hover:border-[#4a8fd4]/50 hover:-translate-y-1">
+      <div className="bg-[#243052] rounded-xl overflow-hidden border border-[#2e3d6a] transition-all duration-300 hover:border-[#4ab8b0]/50 hover:-translate-y-1">
         {/* Image Placeholder */}
         <div className="aspect-video bg-[#1a2035] flex items-center justify-center">
           <div className="text-[#7a8aaa] text-sm">Project Image</div>
@@ -21,7 +21,7 @@ export function ProjectCardNew({ project }: ProjectCardNewProps) {
         {/* Content */}
         <div className="p-5">
           <div className="flex items-center gap-2 mb-3">
-            <Badge className="bg-[#4a8fd4]/20 text-[#4a8fd4] hover:bg-[#4a8fd4]/30 border-0">
+            <Badge className="bg-[#4ab8b0]/20 text-[#4ab8b0] hover:bg-[#4ab8b0]/30 border-0">
               {project.category}
             </Badge>
             {project.inProgress && (
@@ -43,7 +43,7 @@ export function ProjectCardNew({ project }: ProjectCardNewProps) {
             </div>
 
             <div className="flex-shrink-0 mt-1">
-              <ArrowRight className="size-5 text-[#7a8aaa] group-hover:text-[#4a8fd4] group-hover:translate-x-1 transition-all duration-300" />
+              <ArrowRight className="size-5 text-[#7a8aaa] group-hover:text-[#4ab8b0] group-hover:translate-x-1 transition-all duration-300" />
             </div>
           </div>
         </div>

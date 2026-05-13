@@ -10,25 +10,41 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog"
 import { Calendar, Users } from "lucide-react"
+import { IconBallFootball, IconSpeakerphone, IconChartBar } from "@tabler/icons-react"
+
+const iconMap = {
+  football: IconBallFootball,
+  speakerphone: IconSpeakerphone,
+  "chart-bar": IconChartBar,
+} as const
+
+type IconKey = keyof typeof iconMap
 
 interface ActivityCardProps {
   title: string
   role: string
   period: string
   description: string
+  iconKey: IconKey
 }
 
-export function ActivityCard({ title, role, period, description }: ActivityCardProps) {
+export function ActivityCard({ title, role, period, description, iconKey }: ActivityCardProps) {
   const [open, setOpen] = useState(false)
+  const Icon = iconMap[iconKey]
 
   return (
     <>
       <Card
-        className="cursor-pointer transition-all duration-300 hover:border-[#4a8fd4]/50 hover:-translate-y-1 bg-[#243052] border-[#2e3d6a]"
+        className="cursor-pointer transition-all duration-300 hover:border-[#4ab8b0]/50 hover:-translate-y-1 bg-[#243052] border-[#2e3d6a]"
         onClick={() => setOpen(true)}
       >
         <CardHeader className="pb-2">
-          <CardTitle className="text-base leading-tight text-white">{title}</CardTitle>
+          <div className="flex items-center gap-3">
+            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#4ab8b0]/20 flex items-center justify-center">
+              <Icon size={20} className="text-[#4ab8b0]" />
+            </div>
+            <CardTitle className="text-base leading-tight text-white">{title}</CardTitle>
+          </div>
         </CardHeader>
         <CardContent className="pt-0 space-y-2">
           <p className="text-sm text-[#c0cce8] leading-snug">{description}</p>
@@ -54,7 +70,7 @@ export function ActivityCard({ title, role, period, description }: ActivityCardP
 
           <div className="space-y-4 pt-2">
             <p className="text-foreground leading-relaxed">{description}</p>
-            
+
             <div className="flex items-center gap-3 text-foreground">
               <Users className="size-5 text-[var(--blue-accent)]" />
               <div>

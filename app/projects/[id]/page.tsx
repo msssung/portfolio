@@ -69,12 +69,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           <h1 className="text-3xl md:text-4xl font-bold mb-6">{project.title}</h1>
 
           {/* Description Quote Block */}
-          <div className="border-l-4 border-[#4a8fd4] pl-4 py-2 bg-[#4a8fd4]/5 rounded-r-lg mb-6">
+          <div className="border-l-4 border-[#4ab8b0] pl-4 py-2 bg-[#4ab8b0]/5 rounded-r-lg mb-6">
             <p className="text-white/80 leading-relaxed">{project.description}</p>
           </div>
 
           {/* Role Quote Block */}
-          <div className="border-l-4 border-[#4a8fd4] pl-4 py-2 bg-[#4a8fd4]/5 rounded-r-lg">
+          <div className="border-l-4 border-[#4ab8b0] pl-4 py-2 bg-[#4ab8b0]/5 rounded-r-lg">
             <p className="text-sm text-white/50 mb-1">담당 역할</p>
             <p className="text-white/80 leading-relaxed">{project.role}</p>
           </div>
@@ -124,7 +124,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 </div>
                 <div className="bg-[#1a2035] rounded-lg px-4 py-3">
                   <p className="text-sm text-white/70">
-                    <span className="text-[#4a8fd4]">선택 이유: </span>
+                    <span className="text-[#4ab8b0]">선택 이유: </span>
                     {tech.reason}
                   </p>
                 </div>
@@ -141,7 +141,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
           <div className="relative pl-6">
             {/* Timeline Line */}
-            <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#4a8fd4]/30 rounded-full" />
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#4ab8b0]/30 rounded-full" />
 
             {/* Timeline Items */}
             <div className="space-y-6">
@@ -176,9 +176,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               icon={Lightbulb}
               title="개선점"
               content={project.retrospective.improvements}
-              borderColor="border-[#4a8fd4]"
-              iconColor="text-[#4a8fd4]"
-              bgColor="bg-[#4a8fd4]/5"
+              borderColor="border-[#4ab8b0]"
+              iconColor="text-[#4ab8b0]"
+              bgColor="bg-[#4ab8b0]/5"
             />
             <RetroCard
               icon={AlertCircle}
@@ -227,7 +227,7 @@ function TimelineItem({
   return (
     <div className="relative">
       <div
-        className="absolute -left-6 top-1.5 w-3 h-3 rounded-full bg-[#4a8fd4] ring-4 ring-[#1a2035]"
+        className="absolute -left-6 top-1.5 w-3 h-3 rounded-full bg-[#4ab8b0] ring-4 ring-[#1a2035]"
       />
       <div className="bg-[#243052] rounded-lg p-4 border border-white/10">
         <span className="text-sm font-medium text-white/50 block mb-1">

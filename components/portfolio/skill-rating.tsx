@@ -18,7 +18,7 @@ export function SkillRating({ name, rating, maxRating = 3 }: SkillRatingProps) {
             key={index}
             className={`size-4 ${
               index < rating
-                ? "fill-[#4a8fd4] text-[#4a8fd4]"
+                ? "fill-[#4ab8b0] text-[#4ab8b0]"
                 : "text-[#7a8aaa]/30"
             }`}
           />
@@ -36,7 +36,7 @@ interface SkillGroupProps {
 export function SkillGroup({ title, skills }: SkillGroupProps) {
   return (
     <div className="bg-[#243052] rounded-lg border border-[#2e3d6a] p-5">
-      <h3 className="font-semibold text-[#4a8fd4] mb-3">{title}</h3>
+      <h3 className="font-semibold text-[#4ab8b0] mb-3">{title}</h3>
       <div className="divide-y divide-[#2e3d6a]">
         {skills.map((skill) => (
           <SkillRating key={skill.name} name={skill.name} rating={skill.rating} />

@@ -35,7 +35,7 @@ export const projects: Project[] = [
   {
     id: "kubernetes-monitoring",
     title: "AI 기반 Kubernetes 모니터링 플랫폼",
-    shortTitle: "K8s 모니터링 플랫폼",
+    shortTitle: "AI 기반 K8s 모니터링 플랫폼",
     category: "AI · MLOps",
     period: "2025.03 ~ 진행 중",
     description: "Kubernetes 클러스터 이상 탐지 및 RAG 기반 LLM 분석 플랫폼. Spring Boot가 수집한 Pod 메트릭을 FastAPI AI 서버가 z-score · Isolation Forest · RAG · LLM으로 정밀 분석 후 티켓을 생성합니다.",
@@ -63,7 +63,7 @@ export const projects: Project[] = [
   {
     id: "news-curation",
     title: "AI 기반 뉴스 큐레이션 서비스",
-    shortTitle: "뉴스 큐레이션 서비스",
+    shortTitle: "AI 기반 기사 큐레이션 서비스",
     category: "AI · RAG",
     period: "2024.09 ~ 2024.12",
     description: "Dify + Milvus 기반 RAG 파이프라인으로 사용자 관심사에 맞는 뉴스를 큐레이션하는 AI 서비스",
