@@ -18,7 +18,7 @@ const contacts = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-[var(--navy)] overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-[#0d1117] overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 py-20 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight text-balance">

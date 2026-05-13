@@ -10,12 +10,13 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog"
 import { Calendar, Users } from "lucide-react"
-import { IconBallFootball, IconSpeakerphone, IconChartBar } from "@tabler/icons-react"
+import { IconBallFootball, IconSpeakerphone, IconChartBar, IconRocket } from "@tabler/icons-react"
 
 const iconMap = {
   football: IconBallFootball,
   speakerphone: IconSpeakerphone,
   "chart-bar": IconChartBar,
+  rocket: IconRocket,
 } as const
 
 type IconKey = keyof typeof iconMap

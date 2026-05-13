@@ -2,7 +2,7 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, Lightbulb, AlertCircle, Rocket } from "lucide-react"
+import { ArrowLeft, Lightbulb, AlertCircle, Rocket, ExternalLink } from "lucide-react"
 import { projects } from "@/lib/projects-data"
 
 interface ProjectPageProps {
@@ -68,6 +68,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
           <h1 className="text-3xl md:text-4xl font-bold mb-6">{project.title}</h1>
 
+          {/* Thumbnail Image */}
+          <div className="w-full rounded-xl overflow-hidden mb-6">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={`/${project.id === "kubernetes-monitoring" ? "k8s-project" : project.id === "news-curation" ? "news-project" : "life-project"}.png`}
+              alt={project.title}
+              className="w-full object-cover"
+            />
+          </div>
+
           {/* Description Quote Block */}
           <div className="border-l-4 border-[#4ab8b0] pl-4 py-2 bg-[#4ab8b0]/5 rounded-r-lg mb-6">
             <p className="text-white/80 leading-relaxed">{project.description}</p>
@@ -78,33 +88,57 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <p className="text-sm text-white/50 mb-1">담당 역할</p>
             <p className="text-white/80 leading-relaxed">{project.role}</p>
           </div>
+
+          {project.id === "life-satisfaction" && (
+            <div className="mt-4">
+              <Button
+                variant="outline"
+                asChild
+                className="bg-[#243052] border-[#2e3d6a] text-[#c0cce8] hover:bg-[#2e3d6a] hover:text-white hover:border-[#4ab8b0] rounded-full px-6 py-5 h-auto"
+              >
+                <a
+                  href="https://velog.io/@msssung/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ExternalLink className="size-5 mr-2 text-[#4ab8b0]" />
+                  Velog
+                </a>
+              </Button>
+            </div>
+          )}
         </header>
 
         {/* Architecture Section */}
-        <section className="mb-12">
-          <h2 className="text-xl md:text-2xl font-bold mb-6">
-            <span className="text-white/50">// </span>아키텍처
-          </h2>
+        {project.id !== "life-satisfaction" && (
+          <section className="mb-12">
+            <h2 className="text-xl md:text-2xl font-bold mb-6">
+              <span className="text-white/50">// </span>아키텍처
+            </h2>
 
-          <div className="bg-[#1a1d26] rounded-xl p-6 border border-white/10">
-            {/* Architecture Image Placeholder */}
-            <div className="aspect-video bg-[#252833] rounded-lg flex items-center justify-center mb-6">
-              <div className="text-white/30 text-sm">Architecture Diagram</div>
-            </div>
+            <div className="bg-[#1a1d26] rounded-xl p-6 border border-white/10">
+              {/* Architecture Image */}
+              <div className="w-full rounded-lg overflow-hidden mb-6">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={project.id === "kubernetes-monitoring" ? "/k8s-architecture.png" : "/news-architecture.png"}
+                  alt={`${project.title} 아키텍처`}
+                  className="w-full object-cover rounded-lg"
+                />
+              </div>
 
-            <div className="border-l-4 border-white/20 pl-4 py-2">
-              <p className="text-sm text-white/50 mb-1">설계 근거</p>
-              <p className="text-white/70 leading-relaxed">
-                {project.id === "kubernetes-monitoring" &&
-                  "Spring Boot 메트릭 수집 → FastAPI AI 분석 → 4단계 파이프라인(z-score → ML → RAG → LLM)으로 점진적 정밀도 향상"}
-                {project.id === "news-curation" &&
-                  "Dify 워크플로우 기반 RAG 파이프라인으로 사용자 질의 → 벡터 검색 → LLM 응답 생성"}
-                {project.id === "life-satisfaction" &&
-                  "데이터 전처리 → EDA 질문 설정 → 시각화 분석 → ML 모델링으로 인사이트 도출"}
-              </p>
+              <div className="border-l-4 border-white/20 pl-4 py-2">
+                <p className="text-sm text-white/50 mb-1">설계 근거</p>
+                <p className="text-white/70 leading-relaxed">
+                  {project.id === "kubernetes-monitoring" &&
+                    "Spring Boot 메트릭 수집 → FastAPI AI 분석 → 4단계 파이프라인(z-score → ML → RAG → LLM)으로 점진적 정밀도 향상"}
+                  {project.id === "news-curation" &&
+                    "뉴스 기사 크롤링 → 지식베이스 적재 → RAG 구조 LLM 응답"}
+                </p>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* Tech Stack Section */}
         <section className="mb-12">
@@ -174,7 +208,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           <div className="grid md:grid-cols-3 gap-4">
             <RetroCard
               icon={Lightbulb}
-              title="개선점"
+              title="성장한 점"
               content={project.retrospective.improvements}
               borderColor="border-[#4ab8b0]"
               iconColor="text-[#4ab8b0]"

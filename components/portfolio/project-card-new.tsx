@@ -13,9 +13,14 @@ export function ProjectCardNew({ project }: ProjectCardNewProps) {
   return (
     <Link href={`/projects/${project.id}`} className="block group">
       <div className="bg-[#243052] rounded-xl overflow-hidden border border-[#2e3d6a] transition-all duration-300 hover:border-[#4ab8b0]/50 hover:-translate-y-1">
-        {/* Image Placeholder */}
-        <div className="aspect-video bg-[#1a2035] flex items-center justify-center">
-          <div className="text-[#7a8aaa] text-sm">Project Image</div>
+        {/* Project Image */}
+        <div className="aspect-video overflow-hidden">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={`/${project.id === "kubernetes-monitoring" ? "k8s-project" : project.id === "news-curation" ? "news-project" : "life-project"}.png`}
+            alt={project.shortTitle}
+            className="w-full h-full object-cover"
+          />
         </div>
 
         {/* Content */}
