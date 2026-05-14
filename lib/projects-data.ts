@@ -37,7 +37,7 @@ export const projects: Project[] = [
     title: "AI 기반 Kubernetes 모니터링 플랫폼",
     shortTitle: "AI 기반 K8s 모니터링 플랫폼",
     category: "AI · MLOps",
-    period: "2025.03 ~ 진행 중",
+    period: "2026.04 ~ 진행 중",
     description: "Kubernetes 클러스터 이상 탐지 및 RAG 기반 LLM 분석 플랫폼. Kubernetes 환경에서 발생하는 복잡한 매트릭, 로그, 클러스터 이벤트를 실시간으로 통합 수집 및 분석하며, RAG구조를 기반으로 한 LLM 분석 계층을 결합하여 장애의 근본 원인을 추론하고 대화형 진단 결과를 제공합니다.",
     role: "AI 파트 담당. FastAPI 서버 설계 및 구현, 이상 탐지 파이프라인 구축, RAG 및 LLM 연동.",
     techStack: [
@@ -65,7 +65,7 @@ export const projects: Project[] = [
     title: "AI 기반 뉴스 큐레이션 서비스",
     shortTitle: "AI 기반 기사 큐레이션 서비스",
     category: "AI · RAG",
-    period: "2024.09 ~ 2024.12",
+    period: "2026.02 ~ 진행 중",
     description: "Dify + Milvus 기반 RAG 파이프라인으로 최신 뉴스 검색, 요약, 중요도 생성 등의 기능을 포함하는 AI 서비스",
     role: "RAG 파이프라인 설계 및 Dify 워크플로우 개발 담당",
     techStack: [
