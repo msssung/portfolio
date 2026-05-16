@@ -17,7 +17,7 @@ export function ProjectCardNew({ project }: ProjectCardNewProps) {
         <div className="aspect-video overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={`/${project.id === "kubernetes-monitoring" ? "k8s-project" : project.id === "news-curation" ? "news-project" : "life-project"}.png`}
+            src={`/${project.id === "kubernetes-monitoring" ? "k8s-project2" : project.id === "news-curation" ? "news-project" : "life-project"}.png`}
             alt={project.shortTitle}
             className="w-full h-full object-cover"
           />

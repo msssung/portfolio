@@ -72,7 +72,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           <div className="w-full rounded-xl overflow-hidden mb-6">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`/${project.id === "kubernetes-monitoring" ? "k8s-project" : project.id === "news-curation" ? "news-project" : "life-project"}.png`}
+              src={`/${project.id === "kubernetes-monitoring" ? "k8s-project2" : project.id === "news-curation" ? "news-project" : "life-project"}.png`}
               alt={project.title}
               className="w-full object-cover"
             />
