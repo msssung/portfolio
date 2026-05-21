@@ -41,7 +41,7 @@ export function Hero() {
                 key={contact.label}
                 variant="outline"
                 asChild
-                className="bg-[#243052] border-[#2e3d6a] text-[#c0cce8] hover:bg-[#2e3d6a] hover:text-white hover:border-[#4ab8b0] rounded-full px-6 py-5 h-auto"
+                className="bg-[#0d1117] border-[#4ab8b0] text-[#c0cce8] hover:bg-[#2e3d6a] hover:text-white hover:border-[#4ab8b0] rounded-full px-6 py-5 h-auto"
               >
                 <a
                   href={contact.href}
