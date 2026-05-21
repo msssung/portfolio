@@ -35,7 +35,7 @@ interface SkillGroupProps {
 
 export function SkillGroup({ title, skills }: SkillGroupProps) {
   return (
-    <div className="bg-[#243052] rounded-lg border border-[#2e3d6a] p-5">
+    <div className="bg-[#0d1117] rounded-lg border border-[#4ab8b0] p-5">
       <h3 className="font-semibold text-[#4ab8b0] mb-3">{title}</h3>
       <div className="divide-y divide-[#2e3d6a]">
         {skills.map((skill) => (

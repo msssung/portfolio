@@ -82,7 +82,7 @@ export default function PortfolioPage() {
         {/* Education Section */}
         <Section id="education" title="Education">
           <div className="max-w-2xl mx-auto">
-            <div className="flex items-center gap-4 bg-[#243052] rounded-lg border border-[#2e3d6a] p-6">
+            <div className="flex items-center gap-4 bg-[#0d1117] rounded-lg border border-[#4ab8b0] p-6">
               <div className="flex-shrink-0 w-14 h-14 rounded-full bg-[#4ab8b0]/20 flex items-center justify-center">
                 <GraduationCap className="size-7 text-[#4ab8b0]" />
               </div>
@@ -103,7 +103,7 @@ export default function PortfolioPage() {
             {certifications.map((cert) => (
               <div
                 key={cert.name}
-                className="flex items-center gap-4 bg-[#243052] rounded-lg border border-[#2e3d6a] p-5"
+                className="flex items-center gap-4 bg-[#0d1117] rounded-lg border border-[#4ab8b0] p-5"
               >
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#4ab8b0]/20 flex items-center justify-center">
                   <Award className="size-6 text-[#4ab8b0]" />

@@ -36,7 +36,7 @@ export function ActivityCard({ title, role, period, description, iconKey }: Acti
   return (
     <>
       <Card
-        className="cursor-pointer transition-all duration-300 hover:border-[#4ab8b0]/50 hover:-translate-y-1 bg-[#243052] border-[#2e3d6a]"
+        className="cursor-pointer transition-all duration-300 hover:border-[#4ab8b0]/50 hover:-translate-y-1 bg-[#0d1117] border-[#4ab8b0]"
         onClick={() => setOpen(true)}
       >
         <CardHeader className="pb-2">

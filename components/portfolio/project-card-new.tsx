@@ -12,7 +12,7 @@ interface ProjectCardNewProps {
 export function ProjectCardNew({ project }: ProjectCardNewProps) {
   return (
     <Link href={`/projects/${project.id}`} className="block group">
-      <div className="bg-[#243052] rounded-xl overflow-hidden border border-[#2e3d6a] transition-all duration-300 hover:border-[#4ab8b0]/50 hover:-translate-y-1">
+      <div className="bg-[#0d1117] rounded-xl overflow-hidden border border-[#4ab8b0] transition-all duration-300 hover:border-[#4ab8b0]/50 hover:-translate-y-1">
         {/* Project Image */}
         <div className="aspect-video overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
