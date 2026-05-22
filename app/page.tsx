@@ -54,7 +54,7 @@ const certifications = [
 
 const activities = [
   { title: "BDAI ML 배포 중심 (MLOps) 과정", role: "수강 중", period: "2026.03 ~ 진행 중", description: "MLOps 관점의 머신러닝 모델 배포 및 운영 과정 수강 중", iconKey: "rocket" as const },
-  { title: "데이터분석 스터디", role: "스터디장", period: "2025.10 ~ 2025.12", description: "Pandas를 활용한 데이터분석 기초 및 실습 스터디 운영", iconKey: "chart-bar" as const },
+  { title: "데이터분석 스터디", role: "스터디장", period: "2025.04 ~ 2025.06", description: "Pandas를 활용한 데이터분석 기초 및 실습 스터디 운영", iconKey: "chart-bar" as const },
   { title: "학생회 홍보국", role: "홍보국 부원", period: "2025.03 ~ 2025.12", description: "정보통신공학과 학생회 홍보국원으로 활동", iconKey: "speakerphone" as const },
   { title: "중앙축구동아리 FC TOTO", role: "부회장", period: "2024.08 ~ 2024.12", description: "동국대학교 중앙 축구 동아리 부회장으로 활동", iconKey: "football" as const },
   { title: "학과 축구소모임 FC정통", role: "부회장", period: "2025.03 ~ 2026.02", description: "정보통신공학과 축구 소모임 부회장으로 활동", iconKey: "football" as const },
