@@ -71,8 +71,7 @@ export const projects: Project[] = [
     techStack: [
       { name: "Dify v1.13.3", purpose: "LLM 워크플로우 플랫폼", reason: "노코드 워크플로우로 빠른 프로토타이핑, LLM·코드·지식검색 노드 통합" },
       { name: "Milvus v2.4.15", purpose: "벡터 데이터베이스", reason: "대규모 벡터 검색 최적화, etcd·MinIO와 Docker Compose로 자체 호스팅" },
-      { name: "Gemini 2.5 Pro", purpose: "LLM (스코어링·요약)", reason: "CoT 분석 품질 우수, 긴 기사 배열 처리에 적합한 컨텍스트 길이" },
-      { name: "Gemini 2.5 Flash", purpose: "LLM (챗봇)", reason: "실시간 대화 응답에 필요한 낮은 지연시간, 비용 대비 성능 우수" },
+{ name: "Gemini 2.5 Flash", purpose: "LLM (챗봇)", reason: "실시간 대화 응답에 필요한 낮은 지연시간, 비용 대비 성능 우수" },
       { name: "text-embedding-3-small", purpose: "임베딩 모델", reason: "Knowledge Base 청크 임베딩, score_threshold 0.5 기준 적합" },
       { name: "RAG", purpose: "검색 증강 생성", reason: "최신 뉴스 실시간 검색으로 학습 데이터 한계 극복 및 환각 감소" },
     ],
